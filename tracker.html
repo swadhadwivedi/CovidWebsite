@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">    <title></title>
+  </head>
+  <body>
+    <div class="data">
+      <table>
+        <tr>
+          <th>ENTIRE WORLD DATA</th>
+        </tr>
+        <tr>
+          <th>Total Cases</th>
+          <th>Total Recovered</th>
+          <th>Total Deaths</th>
+        </tr>
+        <tr id="worldData">
+
+        </tr>
+      </table>
+
+    </div></body>
+
+
+<script>
+
+</script>
+
+  <script>
+    var worldData = ''
+    worldinit()
+
+    function worldinit() {
+      var url = "https://api.covid19api.com/summary"
+      $.get(url, function(worldData){
+        worldData =
+        <tr>
+          <td> $(worldData.Global.TotalConfirmed) </td>
+          <td> $(worldData.Global.TotalRecovered) </td>
+          <td> $(worldData.Global.TotalDeaths) </td>
+        </tr>
+
+        $("#worldata").html(worldData)
+      })
+
+    }
+  </script>
+
+</html>
